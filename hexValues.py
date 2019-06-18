@@ -76,7 +76,7 @@ class RGBtoHex:
             vals=[int(float(self.slide1val.get())),
                  int(float(self.slide2val.get())),
                  int(float(self.slide3val.get()))]
-            newColor = '#' + ('%02x' % vals[0]) + ('%02x' % vals[1]) + ('%02x' % vals[2])
+            newColor = "#%02x%02x%02x" % (vals[0], vals[1], vals[2])
             self.swatch.configure(background = newColor)
             self.colorCode.set(newColor)
         except:
